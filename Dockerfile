@@ -1,4 +1,4 @@
-from python:3.8
+FROM python:3.9-rc-alpine
 
 RUN pip3 install retry requests
 
