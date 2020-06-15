@@ -16,5 +16,5 @@ services:
   public-ip-monitor:
     image: muyajil/public-ip-slack-notifier:latest
     environment:
-      SLACK_WEBHOOK: ${SLACK_WEBHOOK}
+      SLACK_WEBHOOK: "https://some.slack.webhook"
 ```
