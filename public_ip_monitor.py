@@ -33,7 +33,7 @@ def check_and_update_content(content, path):
 @retry(RuntimeError, delay=20)
 def get_current_ip():
     current_ip = requests.get('https://api.ipify.org').text
-    if len(current_ip) > 20:
+    if len(current_ip) > 20 or "Bad Gateway" in current_ip:
         print('Error from API')
         raise RuntimeError('Error from API')
     else:
